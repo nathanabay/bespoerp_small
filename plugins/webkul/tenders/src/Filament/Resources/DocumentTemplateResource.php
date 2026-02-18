@@ -48,6 +48,15 @@ class DocumentTemplateResource extends Resource
                                     ])
                                     ->required(),
                             ]),
+                        Toggle::make('is_active')
+                            ->default(true),
+                        Textarea::make('placeholders_help')
+                            ->label('Available Placeholders')
+                            ->placeholder('e.g. {{ title }}, {{ client_name }}')
+                            ->columnSpanFull(),
+                        Textarea::make('usage_notes')
+                            ->label('Usage Notes')
+                            ->columnSpanFull(),
                         RichEditor::make('content')
                             ->required()
                             ->columnSpanFull(),

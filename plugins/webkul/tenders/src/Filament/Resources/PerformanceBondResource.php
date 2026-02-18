@@ -98,6 +98,12 @@ class PerformanceBondResource extends Resource
                             ->searchable()
                             ->preload()
                             ->hint('Link to issuance or release journal entry'),
+                        TextInput::make('journal_entry')
+                            ->label('Journal Entry Ref (External)')
+                            ->placeholder('Manual reference'),
+                        TextInput::make('release_journal_entry')
+                            ->label('Release Journal Entry Ref')
+                            ->placeholder('Manual reference when released'),
                     ]),
             ]);
     }

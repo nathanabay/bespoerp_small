@@ -4,7 +4,7 @@ namespace Webkul\Tender\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Webkul\ActivityLog\Traits\HasLogActivity;
+use Webkul\Chatter\Traits\HasLogActivity;
 
 class TenderCompetitor extends Model
 {
@@ -19,6 +19,9 @@ class TenderCompetitor extends Model
         'likelihood_to_bid',
         'strengths',
         'our_differentiation',
+        'bid_price',
+        'notes',
+        'is_winner',
     ];
 
     public function tender(): BelongsTo

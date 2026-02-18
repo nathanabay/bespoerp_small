@@ -4,7 +4,7 @@ namespace Webkul\Tender\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Webkul\ActivityLog\Traits\HasLogActivity;
+use Webkul\Chatter\Traits\HasLogActivity;
 
 class InsuranceRequirement extends Model
 {

@@ -18,6 +18,7 @@ class ClarificationQuestion extends Model
         'tender_id',
         'question',
         'answer',
+        'date_asked',
         'status',
         'assigned_to_id',
     ];

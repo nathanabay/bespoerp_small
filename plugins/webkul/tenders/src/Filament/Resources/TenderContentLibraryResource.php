@@ -46,6 +46,21 @@ class TenderContentLibraryResource extends Resource
                                         'other'  => 'Other',
                                     ])
                                     ->required(),
+                                Select::make('status')
+                                    ->options([
+                                        'Draft' => 'Draft',
+                                        'Published' => 'Published',
+                                        'Archived' => 'Archived',
+                                    ])
+                                    ->default('Draft')
+                                    ->required(),
+                                Select::make('content_owner_id')
+                                    ->relationship('contentOwner', 'name') // Need relationship in model
+                                    ->searchable()
+                                    ->preload(),
+                                TextInput::make('keywords')
+                                    ->placeholder('Comma separated tags')
+                                    ->columnSpanFull(),
                             ]),
                         RichEditor::make('content')
                             ->columnSpanFull(),

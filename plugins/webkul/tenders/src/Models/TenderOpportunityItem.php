@@ -15,10 +15,14 @@ class TenderOpportunityItem extends Model
 
     protected $fillable = [
         'tender_id',
+        'item_code',
+        'item_name',
         'description',
+        'uom',
         'qty',
         'rate',
         'total_cost',
+        'notes',
     ];
 
     protected $casts = [

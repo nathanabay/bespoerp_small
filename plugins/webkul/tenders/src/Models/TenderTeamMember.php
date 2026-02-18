@@ -31,6 +31,7 @@ class TenderTeamMember extends Model
         'tender_id',
         'user_id',
         'role',
+        'assigned_date',
         'responsibilities',
     ];
 

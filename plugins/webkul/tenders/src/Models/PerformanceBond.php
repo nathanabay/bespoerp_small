@@ -26,6 +26,8 @@ class PerformanceBond extends Model
         'bank_name',
         'expiry_date',
         'journal_entry_id',
+        'journal_entry',
+        'release_journal_entry',
     ];
 
     protected $casts = [

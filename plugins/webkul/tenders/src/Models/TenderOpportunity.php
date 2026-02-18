@@ -142,6 +142,7 @@ class TenderOpportunity extends Model
     ];
 
     protected $casts = [
+        'status'              => \Webkul\Tender\Enums\TenderOpportunityStatusEnum::class,
         'submission_deadline' => 'datetime',
         'value_estimated'     => 'decimal:2',
         'bid_probability'     => 'decimal:2',
