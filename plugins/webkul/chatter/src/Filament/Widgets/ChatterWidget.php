@@ -28,4 +28,20 @@ class ChatterWidget extends Widget
     {
         return $this->record;
     }
+
+    protected function getViewData(): array
+    {
+        return [
+            'record' => $this->record,
+            'resourceClass' => \Filament\Facades\Filament::getModelResource($this->record::class) ?? '',
+            'messageMailViewPath' => 'chatter::mail.message', // Default or config
+            'followerMailViewPath' => 'chatter::mail.follower', // Default or config
+            'isMessageActionVisible' => true,
+            'isLogActionVisible' => true,
+            'isActivityActionVisible' => true,
+            'isFileActionVisible' => true,
+            'isFollowerActionVisible' => true,
+            'activityPlans' => collect(),
+        ];
+    }
 }

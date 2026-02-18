@@ -98,7 +98,7 @@ class ChatterPanel extends Component implements HasActions, HasForms, HasInfolis
     public function mount(
         Model $record,
         string $resourceClass,
-        Collection $activityPlans,
+        Collection|array $activityPlans,
         array $filters = [],
         string|Closure|null $messageMailViewPath = null,
         string|Closure|null $followerMailViewPath = null,

@@ -29,4 +29,5 @@ return [
     Webkul\Timesheet\TimesheetServiceProvider::class,
     Webkul\Website\WebsiteServiceProvider::class,
     Webkul\PluginManager\PluginManagerServiceProvider::class,
+    Webkul\Tender\TenderServiceProvider::class,
 ];

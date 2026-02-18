@@ -1,0 +1,30 @@
+{
+    "name": "webkul/tenders",
+    "description": "Tender Management System for Aureus ERP",
+    "authors": [
+        {
+            "name": "Aureus ERP",
+            "email": "support@aureuserp.in"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Webkul\\Tender\\TenderServiceProvider"
+            ],
+            "aliases": {}
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Webkul\\Tender\\": "src/",
+            "Webkul\\Tender\\Database\\Factories\\": "database/factories/",
+            "Webkul\\Tender\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Webkul\\Tender\\Tests\\": "tests/"
+        }
+    }
+}

@@ -436,7 +436,7 @@ class InstallCommand extends Command
 
             $artisan = escapeshellarg(base_path('artisan'));
 
-            $cmd = "timeout 60 $php $artisan shield:generate --all --option=permissions --panel=admin 2>&1";
+            $cmd = "$php $artisan shield:generate --all --option=permissions --panel=admin 2>&1";
 
             exec($cmd, $output, $exitCode);
 
